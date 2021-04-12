@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace qlbanhanh
 {
-    public partial class Form1 : Form
+    public partial class formDangNhap : Form
     {
-        public Form1()
+        public formDangNhap()
         {
             InitializeComponent();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (txbDangNhap.Text == "admin" && txbMatKhau.Text == "admin")
+            {
+                this.Visible = false;
+                QuanLy formQL = new QuanLy();
+                formQL.ShowDialog();
+                this.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Tên truy cập hoặc mật khẩu sai");
+            }
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void linklbTaiKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Tên truy cập: admin\n" + "Mật khẩu: admin");
         }
     }
 }
