@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomParameter.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +85,18 @@
     <Compile Include="QuanLy.Designer.cs">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHang.Designer.cs">
+      <DependentUpon>ThemHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemHH.Designer.cs">
+      <DependentUpon>TimKiemHH.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy.resx">
       <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHang.resx">
+      <DependentUpon>ThemHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemHH.resx">
+      <DependentUpon>TimKiemHH.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
