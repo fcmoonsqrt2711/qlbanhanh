@@ -74,10 +74,10 @@ namespace qlbanhanh
                     String sqlSearch = "";
                     if (cbbTimKiem.SelectedIndex == 0)
                     {
-                        sqlSearch = "exec searchTenKH N'" + valueSearch + "'";
+                        sqlSearch = "exec searchTenNV N'" + valueSearch + "'";
                         if (db.SelectData(sqlSearch).Rows.Count != 0)
                         {
-                            new FormSearchKH(sqlSearch).Show();
+                            new FormSearchNV(sqlSearch).Show();
                         }
                         else
                         {
@@ -86,10 +86,10 @@ namespace qlbanhanh
                     }
                     else if (cbbTimKiem.SelectedIndex == 1)
                     {
-                        sqlSearch = "exec searchDiaChiKH N'" + valueSearch + "'";
+                        sqlSearch = "exec searchDiaChiNV N'" + valueSearch + "'";
                         if (db.SelectData(sqlSearch).Rows.Count != 0)
                         {
-                            new FormSearchKH(sqlSearch).Show();
+                            new FormSearchNV(sqlSearch).Show();
                         }
                         else
                         {
@@ -98,10 +98,10 @@ namespace qlbanhanh
                     }
                     else if (cbbTimKiem.SelectedIndex == 2)
                     {
-                        sqlSearch = "exec searchSDTKH N'" + valueSearch + "'";
+                        sqlSearch = "exec searchSDTNV N'" + valueSearch + "'";
                         if (db.SelectData(sqlSearch).Rows.Count != 0)
                         {
-                            new FormSearchKH(sqlSearch).Show();
+                            new FormSearchNV(sqlSearch).Show();
                         }
                         else
                         {

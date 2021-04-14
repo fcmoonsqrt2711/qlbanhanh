@@ -49,7 +49,7 @@ namespace qlbanhanh
             var db = new Database();
             if (MessageBox.Show("Bạn muốn xóa khách hàng " + dgvKhachHang.CurrentRow.Cells["tenKhach"].Value.ToString() + " ?", "Warning!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                db.del_HDban(dgvKhachHang.CurrentRow.Cells["maKhach"].Value.ToString());
+                //db.del_HDban(dgvKhachHang.CurrentRow.Cells["maKhach"].Value.ToString());
                 db.del_KhachHang(dgvKhachHang.CurrentRow.Cells["maKhach"].Value.ToString());
             }
 

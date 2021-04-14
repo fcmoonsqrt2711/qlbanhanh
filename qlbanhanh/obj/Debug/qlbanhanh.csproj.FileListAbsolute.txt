@@ -69,3 +69,4 @@ E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.pd
 E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\bin\Debug\qlbanhanh.exe.config
 E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\bin\Debug\qlbanhanh.exe
 E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\bin\Debug\qlbanhanh.pdb
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.FormSearchNV.resources
