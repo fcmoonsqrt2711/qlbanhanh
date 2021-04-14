@@ -229,3 +229,84 @@ begin
 	where sdt = @SDTKH
 end
 
+
+-----------------------------------------------------
+-- Nhan Vien--
+create proc InsertNhanVien
+	@tenNV nvarchar(50),
+	@GT nvarchar(10),
+	@diaChi nvarchar(100),
+	@SDT nvarchar(14)
+as
+begin
+	insert into nhanvien
+	(
+		maNhanVien, tenNhanVien,gioiTinh, diaChi, sdt
+	)values(
+		'NV' + cast(next value for ThemSeq as nvarchar(10)),
+		@tenNV,
+		@diaChi,
+		@GT,
+		@SDT
+	);
+
+if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+----------------------------------------------------------
+go
+create proc UpdateNhanVien
+	@maNV nvarchar(10),
+	@tenNV nvarchar(50),
+	@GT nvarchar(10),
+	@diaChi nvarchar(100),
+	@SDT nvarchar(14)
+as
+begin
+	update nhanvien
+	set
+		tenNhanVien = @tenNV,
+		gioiTinh = @GT,
+		diaChi = @diaChi,
+		sdt = @SDT
+	where maNhanVien = @maNV;
+
+	if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+
+go
+create procedure SelectNhanVienByID @maNV char(10)
+as 
+begin
+	select maNhanVien, tenNhanVien,gioiTinh, diaChi, sdt
+	from nhanvien
+	where maNhanVien = @maNV
+end
+
+go
+create procedure searchTenNV @TenNV nvarchar(50)
+as 
+begin
+	select maNhanVien, tenNhanVien,gioiTinh, diaChi, sdt
+	from nhanvien
+	where tenNhanVien = @TenNV
+end
+
+go
+create procedure searchDiaChiNV @DiaChi nvarchar(50)
+as 
+begin
+	select maNhanVien, tenNhanVien,gioiTinh, diaChi, sdt
+	from nhanvien
+	where diaChi = @DiaChi
+end
+
+go
+create procedure searchSDTNV @SDTNV nvarchar(14)
+as 
+begin
+	select maNhanVien, tenNhanVien,gioiTinh, diaChi, sdt
+	from nhanvien
+	where sdt = @SDTNV
+end

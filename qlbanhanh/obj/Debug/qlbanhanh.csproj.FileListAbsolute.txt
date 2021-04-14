@@ -49,3 +49,20 @@ D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.exe
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.pdb
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.ThemKhachHang.resources
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.FormSearchKH.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.csprojAssemblyReference.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.formDangNhap.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.FormSearchKH.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.Properties.Resources.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.QLHangHoa.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.QLHoaDon.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.QLKhachHang.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.QLNhanVien.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.QuanLy.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.ThemHang.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.ThemKhachHang.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.ThemNhanVien.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.TimKiemHH.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.csproj.GenerateResource.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.csproj.CoreCompileInputs.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.exe
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex5\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.pdb

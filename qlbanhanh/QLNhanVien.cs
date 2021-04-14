@@ -16,5 +16,26 @@ namespace qlbanhanh
         {
             InitializeComponent();
         }
+        private void reload()
+        {
+            dgvNhanVien.DataSource = new Database().SelectData("select * from nhanvien");
+
+        }
+
+        private void QLNhanVien_Load(object sender, EventArgs e)
+        {
+            dgvNhanVien.DataSource = new Database().SelectData("select * from nhanvien");
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            (new ThemNhanVien(null, dgvNhanVien)).ShowDialog();
+            reload();
+        }
+
+        private void dgvNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
