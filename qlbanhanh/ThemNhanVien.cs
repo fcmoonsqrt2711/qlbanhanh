@@ -57,7 +57,7 @@ namespace qlbanhanh
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string sql = "";
+            string sql;
             string tenNV = txtTenNV.Text;
             string diaChi = txtDiaChi.Text;
             string SDT = txtSDT.Text;
@@ -71,6 +71,7 @@ namespace qlbanhanh
             {
                 GioiTinh = rdbGene2.Text;
             }
+
             if (string.IsNullOrEmpty(MaNV))
             {
                 sql = "InsertNhanVien";
@@ -83,46 +84,47 @@ namespace qlbanhanh
                     key = "@maNV",
                     value = MaNV
                 });
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@tenNV",
-                    value = tenNV
-                });
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@GT",
-                    value = GioiTinh
-                });
+                
+            }
+            lstPara.Add(new CustomParameter()
+            {
+                key = "@tenNV",
+                value = tenNV
+            });
+            lstPara.Add(new CustomParameter()
+            {
+                key = "@GT",
+                value = GioiTinh
+            });
 
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@diaChi",
-                    value = diaChi
-                });
+            lstPara.Add(new CustomParameter()
+            {
+                key = "@diaChi",
+                value = diaChi
+            });
 
-                lstPara.Add(new CustomParameter()
-                {
-                    key = "@SDT",
-                    value = SDT
-                });
+            lstPara.Add(new CustomParameter()
+            {
+                key = "@SDT",
+                value = SDT
+            });
 
-                var rs = new Database().execute(sql, lstPara);
-                if (rs == 1)
+            var rs = new Database().execute(sql, lstPara);
+            if (rs == 1)
+            {
+                if (string.IsNullOrEmpty(MaNV))
                 {
-                    if (string.IsNullOrEmpty(MaNV))
-                    {
-                        MessageBox.Show("Thêm mới thành công");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật thành công");
-                    }
-                    this.Dispose();
+                    MessageBox.Show("Thêm mới thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Thao tác không thành công");
+                    MessageBox.Show("Cập nhật thành công");
                 }
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Thao tác không thành công");
             }
         }
 

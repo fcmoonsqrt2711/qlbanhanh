@@ -245,14 +245,16 @@ begin
 	)values(
 		'NV' + cast(next value for ThemSeq as nvarchar(10)),
 		@tenNV,
-		@diaChi,
 		@GT,
+		@diaChi,
 		@SDT
 	);
 
 if @@ROWCOUNT > 0 begin return 1 end
 		else begin return 0 end;
 end
+
+exec InsertNhanVien 'Hung','Nam','Tan Lap','0984815759'
 ----------------------------------------------------------
 go
 create proc UpdateNhanVien
