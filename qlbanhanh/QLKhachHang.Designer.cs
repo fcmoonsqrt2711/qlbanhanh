@@ -43,20 +43,24 @@ namespace qlbanhanh
             // txbTimKiem
             // 
             this.txbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTimKiem.Location = new System.Drawing.Point(313, 483);
+            this.txbTimKiem.Location = new System.Drawing.Point(272, 483);
             this.txbTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(434, 29);
+            this.txbTimKiem.Size = new System.Drawing.Size(475, 29);
             this.txbTimKiem.TabIndex = 3;
             // 
             // cbbTimKiem
             // 
             this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(149, 484);
+            this.cbbTimKiem.Items.AddRange(new object[] {
+            "Tên Khách Hàng",
+            "Địa Chỉ",
+            "SĐT"});
+            this.cbbTimKiem.Location = new System.Drawing.Point(29, 484);
             this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(118, 28);
+            this.cbbTimKiem.Size = new System.Drawing.Size(193, 28);
             this.cbbTimKiem.TabIndex = 2;
             // 
             // btnThoat
@@ -82,6 +86,7 @@ namespace qlbanhanh
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnXoa
             // 
@@ -93,6 +98,7 @@ namespace qlbanhanh
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 

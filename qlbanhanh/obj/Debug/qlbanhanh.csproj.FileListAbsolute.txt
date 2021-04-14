@@ -48,3 +48,4 @@ D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.csproj.CoreCompileInputs.
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.exe
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.pdb
 D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.ThemKhachHang.resources
+D:\thuctapnhom\qlbanhanh\qlbanhanh\obj\Debug\qlbanhanh.FormSearchKH.resources

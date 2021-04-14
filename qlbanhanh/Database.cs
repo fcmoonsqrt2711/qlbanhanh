@@ -164,5 +164,46 @@ namespace qlbanhanh
                 conn.Close();
             }
         }
+
+        public bool del_KhachHang(string maKH)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE From khach where maKhach = '" + maKH + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
+        public bool del_HDban(string maKH)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE From HDban where maKhach = '" + maKH + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
     }
 }
