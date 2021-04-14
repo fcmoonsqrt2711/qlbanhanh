@@ -23,7 +23,7 @@ create table hang
 
 create table nhanvien
 (
-	maNhanVien nvarchar(10) PRIMARY key,
+	maNhanVien nvarchar(10) PRIMARY key ,
 	tenNhanVien nvarchar(50),
 	gioiTinh nvarchar(10),
 	diaChi nvarchar(100),
@@ -33,11 +33,13 @@ create table nhanvien
 create table HDban
 (
 	maHDban nvarchar(10) PRIMARY key,
-	maNhanVien nvarchar(10) references nhanvien(manhanvien),
-	maKhach nvarchar(10) references khach(makhach),
+	maNhanVien nvarchar(10) references nhanvien(manhanvien) ON DELETE CASCADE,
+	maKhach nvarchar(10) references khach(makhach) ON DELETE CASCADE,
 	ngayBan datetime,
 	tongtien float (20)
 )
+
+
 
 create table chitiethdban
 (
@@ -312,3 +314,4 @@ begin
 	from nhanvien
 	where sdt = @SDTNV
 end
+

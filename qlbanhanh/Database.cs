@@ -205,5 +205,25 @@ namespace qlbanhanh
             return check;
         }
 
+        public bool del_NhanVien(string maNV)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE From nhanvien where maNhanVien = '" + maNV + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
     }
 }
