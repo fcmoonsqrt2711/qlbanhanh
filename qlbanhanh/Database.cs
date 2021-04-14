@@ -11,7 +11,7 @@ namespace qlbanhanh
 {
     public class Database
     {
-        private string connectionString = "Data Source=DESKTOP-P5SQIP5;Initial Catalog=qlbh;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=DESKTOP-68O7DLF;Initial Catalog=qlbh;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         private DataTable dt;
@@ -136,6 +136,33 @@ namespace qlbanhanh
                 throw;
             }
             return check;
+        }
+
+        public int execute(string sql, List<CustomParameter> lstPara)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //return (int)cmd.ExecuteScalar();
+
+                foreach (var p in lstPara)
+                {
+                    cmd.Parameters.AddWithValue(p.key, p.value);
+                }
+                var rs = cmd.ExecuteNonQuery();
+                return (int)rs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Error: " + ex.Message);
+                return -100;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

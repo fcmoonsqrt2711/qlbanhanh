@@ -91,6 +91,12 @@
     <Compile Include="ThemHang.Designer.cs">
       <DependentUpon>ThemHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimKiemHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemHang.resx">
       <DependentUpon>ThemHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimKiemHH.resx">
       <DependentUpon>TimKiemHH.cs</DependentUpon>
