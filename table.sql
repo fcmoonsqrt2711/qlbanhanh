@@ -50,6 +50,42 @@ create table chitiethdban
 	thanhtien float (20)
 )
 
+go
+insert into hang values ('TESTSP01','THUOC',3,2.3,4.6)
+insert into hang values ('TESTSP02','QUAN',499,9,14.6)
+insert into hang values ('TESTSP03','AO',2223,44.3,411.6)
+insert into hang values ('TESTSP04','QUAT',300,212.3,414.6)
+insert into hang values ('TESTSP05','CHIEU',111,12.3,14.6)
+
+insert into khach values ('TESTKH01','TUNG','NAM DINH','099999999')
+insert into khach values ('TESTKH02','TU','HA NAM','088888888')
+insert into khach values ('TESTKH03','HUNG','HA TAY','07777777')
+insert into khach values ('TESTKH04','HIEU','HA NOI','066666666')
+insert into khach values ('TESTKH05','LOC','HA DONG','05555555')
+
+
+insert into nhanvien values ('TESTNV01','TUNG','NAM','NAM DINH','099999999')
+insert into nhanvien values ('TESTNV02','TU','NAM','HA NAM','088888888')
+insert into nhanvien values ('TESTNV03','HUNG','NU','HA TAY','07777777')
+insert into nhanvien values ('TESTNV04','HIEU','NAM','HA NOI','066666666')
+insert into nhanvien values ('TESTNV05','LOC','NU','HA DONG','05555555')
+
+
+
+insert into hdban values ('TESTHD01','TESTNV01','TESTKH01','06/06/2020',140000000)
+insert into hdban values ('TESTHD02','TESTNV02','TESTKH02','06/06/2020',28880000)
+insert into hdban values ('TESTHD03','TESTNV03','TESTKH03','06/06/2020',66660000)
+insert into hdban values ('TESTHD04','TESTNV04','TESTKH04','06/06/2020',78870000)
+insert into hdban values ('TESTHD05','TESTNV05','TESTKH05','06/06/2020',688800000)
+
+
+insert into chitiethdban values ('TESTHD01','TESTSP01',666,50.5,140000000)
+insert into chitiethdban values ('TESTHD02','TESTSP02',666,50.5,28880000)
+insert into chitiethdban values ('TESTHD03','TESTSP03',666,500.5,66660000)
+insert into chitiethdban values ('TESTHD04','TESTSP04',666,50.5,78870000)
+insert into chitiethdban values ('TESTHD05','TESTSP05',666,50.5,688800000)
+go
+
 create sequence ThemSeq
 	start with 1000 --bat dau tu 1000
 	increment by 1; --moi lan tang 1 don vi
