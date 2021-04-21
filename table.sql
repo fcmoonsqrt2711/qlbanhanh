@@ -1,4 +1,4 @@
-use qlbh
+﻿use qlbh
 
 
 create table khach
@@ -43,8 +43,8 @@ create table HDban
 
 create table chitiethdban
 (
-	maHDban nvarchar(10)  references hdban(mahdban),
-	maHang nvarchar(10) references hang(maHang),
+	maHDban nvarchar(10)  references hdban(mahdban) ON DELETE CASCADE,
+	maHang nvarchar(10) references hang(maHang) ON DELETE CASCADE,
 	soluong float (20),
 	dongia float (20),
 	thanhtien float (20)
@@ -90,6 +90,7 @@ create sequence ThemSeq
 	start with 1000 --bat dau tu 1000
 	increment by 1; --moi lan tang 1 don vi
 		select next value for ThemSeq
+go
 
 create procedure selectAllHang
 as
@@ -97,6 +98,7 @@ as
 	from hang
 
 exec selectAllHang
+go
 -----------------------------------------------------------
 create procedure selectHangById @Ma nvarchar(10)
 as
@@ -107,7 +109,7 @@ begin
 	where maHang = @Ma
 
 end
-
+go
 ----------------------------------------------------------
 create proc InsertHang
 	@tenHang nvarchar(50),
@@ -130,6 +132,7 @@ begin
 if @@ROWCOUNT > 0 begin return 1 end
 		else begin return 0 end;
 end
+go
 ----------------------------------------------------------
 create proc UpdateHang
 	@maHang nvarchar(10),
@@ -150,6 +153,7 @@ begin
 	if @@ROWCOUNT > 0 begin return 1 end
 		else begin return 0 end;
 end
+go
 ---------------------------------------------------------
 ---Search Hang---
 create procedure searchMaHang @MaHang nvarchar(10)
@@ -266,6 +270,7 @@ begin
 	from khach
 	where sdt = @SDTKH
 end
+go
 
 
 -----------------------------------------------------
@@ -350,4 +355,71 @@ begin
 	from nhanvien
 	where sdt = @SDTNV
 end
+go
+
+-------------Hiếu thêm------------------------------------
+create procedure selectHoaDonById @Ma nvarchar(10)
+as
+begin
+
+	select maHDban, maNhanVien, ngayBan, maKhach, tongtien
+	from HDban
+	where maHDban = @Ma
+
+end
+go
+
+/****** Object:  Sequence [dbo].[HoaDon_seq]    Script Date: 4/18/2021 10:15:31 PM ******/
+CREATE SEQUENCE [dbo].[HoaDon_seq] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+
+create proc InsertHoaDon
+	@maNV char(10),
+	@ngayBan datetime,
+	@maKhach char(10),
+	@tongTien int
+as
+begin
+	insert into HDban
+	(
+		maHDban, maNhanVien, ngayBan, maKhach, tongtien
+	)values(
+		'HD' + cast(next value for HOADON_seq as nvarchar(10)),
+		@maNV,
+		@ngayBan,
+		@maKhach,
+		@tongTien
+	);
+
+if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+go
+
+create proc UpdateHoaDon
+	@maHD char(10),
+	@maNV char(10),
+	@ngayBan datetime,
+	@maKH nvarchar(10),
+	@tongTien int
+as
+begin
+	update HDban
+	set
+		maNhanVien = @maNV,
+		ngayBan = @ngayBan,
+		maKhach = @maKH,
+		tongtien = @tongTien
+	where maHDban = @maHD;
+
+	if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+go
 

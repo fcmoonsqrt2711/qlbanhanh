@@ -11,7 +11,7 @@ namespace qlbanhanh
 {
     public class Database
     {
-        private string connectionString = "Data Source=LAPCUATUNG\\SQLEXPRESS;Initial Catalog=qlbh;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=localhost;Initial Catalog=qlbh;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         private DataTable dt;
@@ -172,6 +172,26 @@ namespace qlbanhanh
             {
                 conn.Open();
                 string sql1 = "DELETE From khach where maKhach = '" + maKH + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
+        public bool del_HoaDon(string maHD)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE From HDban where maHDban = '" + maHD + "'";
                 SqlCommand cmd1 = new SqlCommand(sql1, conn);
                 cmd1.ExecuteNonQuery();
                 check = true;
