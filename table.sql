@@ -382,7 +382,7 @@ GO
 create proc InsertHoaDon
 	@maNV char(10),
 	@ngayBan datetime,
-	@maKhach char(10),
+	@maKH char(10),
 	@tongTien int
 as
 begin
@@ -393,7 +393,7 @@ begin
 		'HD' + cast(next value for HOADON_seq as nvarchar(10)),
 		@maNV,
 		@ngayBan,
-		@maKhach,
+		@maKH,
 		@tongTien
 	);
 

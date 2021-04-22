@@ -29,33 +29,24 @@ namespace qlbanhanh
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbTimKiem = new System.Windows.Forms.TextBox();
-            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpFromSearch = new System.Windows.Forms.DateTimePicker();
+            this.dtpToSearch = new System.Windows.Forms.DateTimePicker();
+            this.nudTongTienFromSearch = new System.Windows.Forms.NumericUpDown();
+            this.nudTongTienToSearch = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTongTienFromSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTongTienToSearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txbTimKiem
-            // 
-            this.txbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTimKiem.Location = new System.Drawing.Point(331, 602);
-            this.txbTimKiem.Name = "txbTimKiem";
-            this.txbTimKiem.Size = new System.Drawing.Size(470, 26);
-            this.txbTimKiem.TabIndex = 3;
-            // 
-            // cbbTimKiem
-            // 
-            this.cbbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(149, 601);
-            this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(121, 28);
-            this.cbbTimKiem.TabIndex = 2;
             // 
             // btnThoat
             // 
@@ -73,17 +64,18 @@ namespace qlbanhanh
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(912, 595);
+            this.btnTimKiem.Location = new System.Drawing.Point(1044, 143);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(129, 39);
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(68, 467);
+            this.btnXoa.Location = new System.Drawing.Point(45, 675);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 39);
             this.btnXoa.TabIndex = 1;
@@ -94,7 +86,7 @@ namespace qlbanhanh
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(68, 189);
+            this.btnThem.Location = new System.Drawing.Point(45, 397);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 41);
             this.btnThem.TabIndex = 0;
@@ -106,7 +98,7 @@ namespace qlbanhanh
             // 
             this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoaDon.Location = new System.Drawing.Point(199, 139);
+            this.dgvHoaDon.Location = new System.Drawing.Point(176, 347);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
@@ -125,15 +117,100 @@ namespace qlbanhanh
             this.label1.TabIndex = 24;
             this.label1.Text = "Quản lý hóa đơn";
             // 
+            // dtpFromSearch
+            // 
+            this.dtpFromSearch.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromSearch.Location = new System.Drawing.Point(224, 143);
+            this.dtpFromSearch.Name = "dtpFromSearch";
+            this.dtpFromSearch.Size = new System.Drawing.Size(320, 30);
+            this.dtpFromSearch.TabIndex = 25;
+            this.dtpFromSearch.Value = new System.DateTime(2021, 4, 22, 16, 14, 23, 0);
+            this.dtpFromSearch.ValueChanged += new System.EventHandler(this.dtpFromSearch_ValueChanged);
+            // 
+            // dtpToSearch
+            // 
+            this.dtpToSearch.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToSearch.Location = new System.Drawing.Point(619, 143);
+            this.dtpToSearch.Name = "dtpToSearch";
+            this.dtpToSearch.Size = new System.Drawing.Size(336, 30);
+            this.dtpToSearch.TabIndex = 26;
+            this.dtpToSearch.ValueChanged += new System.EventHandler(this.dtpToSearch_ValueChanged);
+            // 
+            // nudTongTienFromSearch
+            // 
+            this.nudTongTienFromSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudTongTienFromSearch.Location = new System.Drawing.Point(224, 207);
+            this.nudTongTienFromSearch.Name = "nudTongTienFromSearch";
+            this.nudTongTienFromSearch.Size = new System.Drawing.Size(320, 30);
+            this.nudTongTienFromSearch.TabIndex = 27;
+            this.nudTongTienFromSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudTongTienToSearch
+            // 
+            this.nudTongTienToSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudTongTienToSearch.Location = new System.Drawing.Point(619, 207);
+            this.nudTongTienToSearch.Name = "nudTongTienToSearch";
+            this.nudTongTienToSearch.Size = new System.Drawing.Size(336, 30);
+            this.nudTongTienToSearch.TabIndex = 28;
+            this.nudTongTienToSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 25);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Ngày thanh toán từ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(74, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Tổng tiền từ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(566, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "đến";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(566, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 25);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "đến";
+            // 
             // QLHoaDon
             // 
             this.AcceptButton = this.btnTimKiem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(1241, 674);
-            this.Controls.Add(this.txbTimKiem);
-            this.Controls.Add(this.cbbTimKiem);
+            this.ClientSize = new System.Drawing.Size(1308, 830);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nudTongTienToSearch);
+            this.Controls.Add(this.nudTongTienFromSearch);
+            this.Controls.Add(this.dtpToSearch);
+            this.Controls.Add(this.dtpFromSearch);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
@@ -145,20 +222,27 @@ namespace qlbanhanh
             this.Text = "QLHoaDon";
             this.Load += new System.EventHandler(this.QLHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTongTienFromSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTongTienToSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbTimKiem;
-        private System.Windows.Forms.ComboBox cbbTimKiem;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpFromSearch;
+        private System.Windows.Forms.DateTimePicker dtpToSearch;
+        private System.Windows.Forms.NumericUpDown nudTongTienFromSearch;
+        private System.Windows.Forms.NumericUpDown nudTongTienToSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

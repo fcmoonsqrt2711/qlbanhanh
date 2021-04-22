@@ -15,6 +15,10 @@ namespace qlbanhanh
         public QLHoaDon()
         {
             InitializeComponent();
+            dtpFromSearch.CustomFormat = "";
+            dtpFromSearch.Format = DateTimePickerFormat.Custom;
+            dtpToSearch.CustomFormat = "";
+            dtpToSearch.Format = DateTimePickerFormat.Custom;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -22,21 +26,60 @@ namespace qlbanhanh
 
         }
 
-        private void reload()
+        private void reload(ObjectCommonSearch search)
         {
-            dgvHoaDon.DataSource = new Database().SelectData("select * from HDban");
-
+            string sql = "select * from HDban ";
+            sql += " where ngayBan between ";
+            if (search.DateTime1 != null && search.DateTime1 != DateTime.MinValue)
+            {
+                sql += ("'" + search.DateTime1.ToString() + "'");
+            }
+            else
+            {
+                sql += ("'" + DateTime.Parse("01/01/2000").ToString() + "'");
+            }
+            sql += " and ";
+            if (search.DateTime2 != null && search.DateTime2 != DateTime.MinValue)
+            {
+                sql += ("'" + search.DateTime2.ToString() + "'");
+            }
+            else
+            {
+                sql += ("'" + DateTime.Parse("01/01/2100").ToString() + "'");
+            }
+            sql += " and tongTien between ";
+            if (search.Int1 > 0)
+            {
+                sql += search.Int1.ToString();
+            }
+            else
+            {
+                sql += int.MinValue.ToString();
+            }
+            sql += " and ";
+            if (search.Int2 > 0)
+            {
+                sql += search.Int2.ToString();
+            }
+            else
+            {
+                sql += int.MaxValue.ToString();
+            }
+            dgvHoaDon.DataSource = new Database().SelectData(sql);
+            
         }
 
         private void QLHoaDon_Load(object sender, EventArgs e)
         {
-            reload();
+            ObjectCommonSearch search = new ObjectCommonSearch();
+            reload(search);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             (new ThemHoaDon(null)).ShowDialog();
-            reload();
+            ObjectCommonSearch search = new ObjectCommonSearch();
+            reload(search);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -47,8 +90,8 @@ namespace qlbanhanh
                 //db.del_HDban(dgvKhachHang.CurrentRow.Cells["maKhach"].Value.ToString());
                 db.del_HoaDon(dgvHoaDon.CurrentRow.Cells["maHDban"].Value.ToString());
             }
-
-            reload();
+            ObjectCommonSearch search = new ObjectCommonSearch();
+            reload(search);
         }
 
         private void dgvHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -57,8 +100,29 @@ namespace qlbanhanh
             {
                 string maKH = dgvHoaDon.Rows[e.RowIndex].Cells["maHDban"].Value.ToString();
                 new ThemHoaDon(maKH).ShowDialog();
-                reload();
+                ObjectCommonSearch search = new ObjectCommonSearch();
+                reload(search);
             }
+        }
+
+        private void dtpFromSearch_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFromSearch.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+        }
+
+        private void dtpToSearch_ValueChanged(object sender, EventArgs e)
+        {
+            dtpToSearch.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            ObjectCommonSearch search = new ObjectCommonSearch();
+            search.DateTime1 = dtpFromSearch.Value;
+            search.DateTime2 = dtpToSearch.Value;
+            search.Int1 = (int)nudTongTienFromSearch.Value;
+            search.Int2 = (int)nudTongTienToSearch.Value;
+            reload(search);
         }
     }
 }
