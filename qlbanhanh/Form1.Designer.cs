@@ -129,6 +129,7 @@ namespace qlbanhanh
             this.linklbAbout.TabIndex = 5;
             this.linklbAbout.TabStop = true;
             this.linklbAbout.Text = "About";
+            this.linklbAbout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbAbout_LinkClicked);
             // 
             // formDangNhap
             // 
