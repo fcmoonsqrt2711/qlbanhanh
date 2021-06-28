@@ -36,19 +36,21 @@ namespace qlbanhanh
             // dgvSearchNV
             // 
             this.dgvSearchNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchNV.Location = new System.Drawing.Point(116, 48);
+            this.dgvSearchNV.Location = new System.Drawing.Point(47, 27);
+            this.dgvSearchNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSearchNV.Name = "dgvSearchNV";
             this.dgvSearchNV.RowHeadersWidth = 51;
             this.dgvSearchNV.RowTemplate.Height = 24;
-            this.dgvSearchNV.Size = new System.Drawing.Size(592, 361);
+            this.dgvSearchNV.Size = new System.Drawing.Size(688, 362);
             this.dgvSearchNV.TabIndex = 0;
             // 
             // FormSearchNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(774, 438);
             this.Controls.Add(this.dgvSearchNV);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormSearchNV";
             this.Text = "FormSearchNV";
             this.Load += new System.EventHandler(this.FormSearchNV_Load);

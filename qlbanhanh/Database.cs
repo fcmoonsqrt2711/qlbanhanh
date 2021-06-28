@@ -11,7 +11,7 @@ namespace qlbanhanh
 {
     public class Database
     {
-        private string connectionString = "Data Source=KIENNEIK\\SQLEXPRESS01;Initial Catalog=qlbh;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=Lapcuatung\\SQLEXPRESS;Initial Catalog=qlbh;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         private DataTable dt;

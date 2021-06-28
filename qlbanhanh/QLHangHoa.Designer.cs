@@ -43,7 +43,7 @@ namespace qlbanhanh
             // txbTimKiem
             // 
             this.txbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTimKiem.Location = new System.Drawing.Point(244, 484);
+            this.txbTimKiem.Location = new System.Drawing.Point(337, 100);
             this.txbTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiem.Name = "txbTimKiem";
             this.txbTimKiem.Size = new System.Drawing.Size(354, 23);
@@ -58,10 +58,10 @@ namespace qlbanhanh
             "Tên hàng hóa",
             "Giá nhập\t",
             "Giá bán"});
-            this.cbbTimKiem.Location = new System.Drawing.Point(107, 483);
+            this.cbbTimKiem.Location = new System.Drawing.Point(123, 99);
             this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(92, 24);
+            this.cbbTimKiem.Size = new System.Drawing.Size(132, 24);
             this.cbbTimKiem.TabIndex = 2;
             // 
             // btnThoat
@@ -80,7 +80,7 @@ namespace qlbanhanh
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(680, 479);
+            this.btnTimKiem.Location = new System.Drawing.Point(766, 99);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(97, 32);
@@ -92,10 +92,10 @@ namespace qlbanhanh
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(46, 375);
+            this.btnXoa.Location = new System.Drawing.Point(766, 410);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(56, 32);
+            this.btnXoa.Size = new System.Drawing.Size(67, 32);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -104,10 +104,10 @@ namespace qlbanhanh
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(46, 149);
+            this.btnThem.Location = new System.Drawing.Point(766, 214);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(56, 33);
+            this.btnThem.Size = new System.Drawing.Size(67, 33);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@ namespace qlbanhanh
             // 
             this.dgvHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHangHoa.Location = new System.Drawing.Point(145, 115);
+            this.dgvHangHoa.Location = new System.Drawing.Point(114, 170);
             this.dgvHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHangHoa.Name = "dgvHangHoa";
             this.dgvHangHoa.RowHeadersWidth = 51;

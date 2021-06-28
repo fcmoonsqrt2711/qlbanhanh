@@ -43,8 +43,8 @@ namespace qlbanhanh
             // txbTimKiem
             // 
             this.txbTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTimKiem.Location = new System.Drawing.Point(272, 483);
-            this.txbTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTimKiem.Location = new System.Drawing.Point(265, 105);
+            this.txbTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiem.Name = "txbTimKiem";
             this.txbTimKiem.Size = new System.Drawing.Size(475, 29);
             this.txbTimKiem.TabIndex = 3;
@@ -57,8 +57,8 @@ namespace qlbanhanh
             "Tên Khách Hàng",
             "Địa Chỉ",
             "SĐT"});
-            this.cbbTimKiem.Location = new System.Drawing.Point(29, 484);
-            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbTimKiem.Location = new System.Drawing.Point(48, 106);
+            this.cbbTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.cbbTimKiem.Name = "cbbTimKiem";
             this.cbbTimKiem.Size = new System.Drawing.Size(193, 28);
             this.cbbTimKiem.TabIndex = 2;
@@ -68,8 +68,8 @@ namespace qlbanhanh
             this.btnThoat.BackColor = System.Drawing.Color.Red;
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(29, 33);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Location = new System.Drawing.Point(812, 36);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(97, 32);
             this.btnThoat.TabIndex = 5;
@@ -79,8 +79,8 @@ namespace qlbanhanh
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(783, 480);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Location = new System.Drawing.Point(811, 104);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(97, 32);
             this.btnTimKiem.TabIndex = 4;
@@ -91,8 +91,8 @@ namespace qlbanhanh
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(29, 187);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(813, 384);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(96, 32);
             this.btnXoa.TabIndex = 1;
@@ -103,8 +103,8 @@ namespace qlbanhanh
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(29, 113);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(812, 235);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 33);
             this.btnThem.TabIndex = 0;
@@ -116,8 +116,8 @@ namespace qlbanhanh
             // 
             this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(149, 113);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvKhachHang.Location = new System.Drawing.Point(48, 175);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
@@ -130,7 +130,7 @@ namespace qlbanhanh
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 33);
+            this.label1.Location = new System.Drawing.Point(272, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(374, 46);
@@ -152,7 +152,7 @@ namespace qlbanhanh
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QLKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLKhachHang";

@@ -36,9 +36,9 @@ namespace qlbanhanh
             // dgvSearchHH
             // 
             this.dgvSearchHH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchHH.Location = new System.Drawing.Point(72, 50);
+            this.dgvSearchHH.Location = new System.Drawing.Point(41, 27);
             this.dgvSearchHH.Name = "dgvSearchHH";
-            this.dgvSearchHH.Size = new System.Drawing.Size(662, 342);
+            this.dgvSearchHH.Size = new System.Drawing.Size(723, 382);
             this.dgvSearchHH.TabIndex = 0;
             // 
             // TimKiemHH
